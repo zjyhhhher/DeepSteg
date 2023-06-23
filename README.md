@@ -1,6 +1,13 @@
 # DeepSteg
 Hey! This is a implementation of the paper ：**Hiding Images in Plain Sight: Deep Steganography, by Shumeet Baluja(Google), at NIPS 2017**
 
+你可以使用如下命令加载保存好的模型直接进行测试：
+```python
+autoencoder_model.load_weights('autoencoder_model.hdf5')
+encoder_model.load_weights('encoder_model.hdf5')
+reveal_model.load_weights('reveal_model.hdf5')
+```
+
 **Abstract:** Steganography is the practice of concealing a secret message within another, ordinary, message. Commonly, steganography is used to unobtrusively hide a small message within the noisy regions of a larger image. In this study, we attempt to place a full size color image within another image of the same size. Deep neural networks are simultaneously trained to create the hiding and revealing processes and are designed to specifically work as a pair. The system is trained on images drawn randomly from the ImageNet database, and works well on natural images from a wide variety of sources. Beyond demonstrating the successful application of deep learning to hiding images, we carefully examine how the result is achieved and explore extensions. Unlike many popular steganographic methods that encode the secret message within the least significant bits of the carrier image, our approach compresses and distributes the secret image's representation across all of the available bits.
 
 ## Model
